@@ -1,0 +1,25 @@
+.bio {
+  margin: 0 auto;
+  max-width: 1020px;
+  padding-top: 68px;
+  height: 250px;
+}
+
+.bio article h1 {
+  font-style: normal;
+  font-weight: 300;
+  width: 413px;
+  height: 47px;
+  left: 110px;
+  top: 216px;
+}
+
+.bio article h1 strong {
+  font-weight: bold;
+}
+
+.bio article p {
+  font-size: 22px;
+  line-height: 26px;
+  color: #888888;
+}
