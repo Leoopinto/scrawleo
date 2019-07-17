@@ -2,29 +2,18 @@ import React from 'react';
 
 import Header from './components/Header';
 import Bio from './components/Bio';
+import Feed from './components/Feed'
 
 import './styles.css';
 
-function App() {
-  async function getFeed() {
-    const res = await fetch(
-      `https://api.instagram.com/v1/users/self/media/recent?access_token=${
-        process.env.REACT_APP_INSTAGRAM_TOKEN
-      }`
-    );
-    const resJson = await res.json();
-
-    console.log(resJson);
-  }
-
-  getFeed();
-
-  return (
+function App() {   
+   return (
     <div className="App">
       <Header />
       <Bio />
+      <Feed />
     </div>
   );
 }
 
-export default App;
+export default App
