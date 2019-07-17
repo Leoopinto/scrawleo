@@ -29,7 +29,7 @@ function Feed() {
           <a href={item.link} target="_blank"><img src={item.images.standard_resolution.url} /></a>
           <p>{item.caption.text}{item.likes.count}</p>
           <button>
-            <a href={`https://api.whatsapp.com/send?phone=5515996479484&text=Olá,%20${item.user.full_name}%20gostei%20do%20${item.link},%20gostaria%20de%20um%20orçamento`} target="_blank">Solicitar Orçamento</a>
+            <a href={`https://api.whatsapp.com/send?phone=5515996479484&text=Olá,%20${item.user.full_name}%20gostei%20do%20${item.link},%20gostaria%20de%20um%20orçamento`} target="_blank">Solicitar Orçamento!</a>
           </button>
         </article>
       ))}
