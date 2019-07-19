@@ -7,6 +7,8 @@
   margin: 20px 0;
   padding: 10px 0;
   break-inside: avoid;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .shot img {
@@ -22,10 +24,14 @@
 }
 
 .infos {
-  padding: 0 10px;  
+  padding: 0 10px; 
 }
 
 .infos span {
   font-size: 0.75rem;
   color: #626262;
+}
+
+.infos p {
+  margin-top: 10px;
 }

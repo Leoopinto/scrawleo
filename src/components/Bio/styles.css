@@ -5,6 +5,15 @@
   height: 250px;
 }
 
+@media (max-width: 780px) {
+  .bio {
+    margin: 0 auto;
+    max-width: 95%;
+    padding-top: 68px;
+    height: 250px;
+  }
+}
+
 .bio article h1 {
   font-style: normal;
   font-weight: 300;

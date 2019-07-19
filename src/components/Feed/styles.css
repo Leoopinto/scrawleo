@@ -3,3 +3,11 @@
   margin: 0 auto;
   column-count: 2;
 }
+
+@media (max-width: 700px) {
+  .feed {
+    column-count: 1;
+    margin: 0 auto;
+    max-width: 95%;
+  }
+}
