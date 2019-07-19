@@ -4,11 +4,26 @@
   border-radius: 5px;
   background: #FFF;
   box-shadow: 0 0 10px #00000080;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 10px 0;
   break-inside: avoid;
   display: inline-flex;
   flex-direction: column;
+}
+
+@media (max-width:780px) {
+  .shot {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0 0 10px #00000080;
+    margin: 5px 0;
+    padding: 10px 0;
+    break-inside: avoid;
+    display: inline-flex;
+    flex-direction: column;
+  }
 }
 
 .shot img {
