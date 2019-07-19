@@ -11,10 +11,14 @@
   .header {
     margin: 0 auto;
     max-width: 95%;
-    padding-top: 68px;
+    padding-top: 15px;
   
     display: flex;
     justify-content: space-between;
+  }
+
+  .right {
+    font-size: 13px;
   }
 }
 

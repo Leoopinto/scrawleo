@@ -5,15 +5,6 @@
   height: 250px;
 }
 
-@media (max-width: 780px) {
-  .bio {
-    margin: 0 auto;
-    max-width: 95%;
-    padding-top: 68px;
-    height: 250px;
-  }
-}
-
 .bio article h1 {
   font-style: normal;
   font-weight: 300;
@@ -32,3 +23,31 @@
   line-height: 26px;
   color: #888888;
 }
+
+
+@media (max-width: 780px) {
+  .bio {
+    margin: 0 auto;
+    max-width: 95%;
+    padding-top: 30px;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .bio article p {
+    font-size: 15px;
+    line-height: 26px;
+    color: #888888;
+  }
+
+  .bio article h1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  width: 413px;
+  height: 47px;
+  left: 110px;
+  top: 216px;
+  }
+}
+
