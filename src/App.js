@@ -19,7 +19,7 @@ function App() {
       }`
     );
     const resJson = await res.json();
-    
+
     setAvatar(resJson.avatar_url)
     setName(resJson.name)
   }
@@ -35,8 +35,32 @@ function App() {
   }
 
   useEffect(() => {
-    getProfile()
-    getShots()
+    const promisses = [
+      fetch(
+        `https://api.dribbble.com/v2/user/shots?access_token=${
+        process.env.REACT_APP_DRIBBBLE_TOKEN
+        }`
+      ),
+      fetch(
+        `https://api.dribbble.com/v2/user/?access_token=${
+        process.env.REACT_APP_DRIBBBLE_TOKEN
+        }`
+      )
+    ]
+
+    Promise.all(promisses).then(response => {
+      response[0].json().then(response => {
+        setShots(response)
+      });
+
+      response[1].json().then(response => {
+        setAvatar(response.avatar_url)
+        setName(response.name)
+      });;
+
+
+    })
+
   }, [])
 
   return (
