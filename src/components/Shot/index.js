@@ -1,5 +1,6 @@
 import React from 'react'
 import RemoveHtmlTags from '../../functions/RemoveHtmlTags'
+import RemoveSpecialCaracters from '../../functions/RemoveSpecialCaracters'
 
 import './styles.css'
 
@@ -14,7 +15,7 @@ function Shot({ image, title, description, tags }) {
         {tags.map(tag => (
           <span>#{tag} </span>
         ))}
-        <p>{description && RemoveHtmlTags(description)}</p>
+        <p>{description && RemoveSpecialCaracters(RemoveHtmlTags(description))}</p>
       </div>
     </article>
   )
