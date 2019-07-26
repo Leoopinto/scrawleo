@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import RemoveHtmlTags from '../../functions/RemoveHtmlTags'
+import React from 'react';
 
 import Shot from '../Shot'
 

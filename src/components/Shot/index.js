@@ -10,7 +10,6 @@ function Shot({ image, title, description, tags }) {
     <article className="shot">
       <h1>{title}</h1>
       <img src={image} />
-
       <div className="infos">
         {tags.map(tag => (
           <span>#{tag} </span>

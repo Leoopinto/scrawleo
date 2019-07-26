@@ -9,7 +9,8 @@ import './styles.css';
 function App() {
 
   const [shots, setShots] = useState([])
-  const [profile, setProfile] = useState([])
+  const [avatar, setAvatar] = useState([])
+  const [name, setName] = useState([])
 
   async function getProfile() { //Dribbble profile
     const res = await fetch(
@@ -18,7 +19,9 @@ function App() {
       }`
     );
     const resJson = await res.json();
-    setProfile(resJson)
+    
+    setAvatar(resJson.avatar_url)
+    setName(resJson.name)
   }
 
   async function getShots() { //Dribbble feed
@@ -32,14 +35,14 @@ function App() {
   }
 
   useEffect(() => {
-    getShots()
     getProfile()
+    getShots()
   }, [])
 
   return (
     <div className="App">
-      <Header shots={profile} />
-      <Bio />
+      <Header avatar={avatar} name={name} />
+      <Bio name={name} />
       <Feed shots={shots} />
     </div>
   );
